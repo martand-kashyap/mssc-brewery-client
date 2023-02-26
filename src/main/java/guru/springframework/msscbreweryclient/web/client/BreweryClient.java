@@ -14,10 +14,9 @@ import guru.springframework.msscbreweryclient.web.model.BeerDto;
 import lombok.Setter;
 
 @Component
-// @ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "sfg.brewery", ignoreUnknownFields = false)
 public class BreweryClient {
-    @Value("${sfg.brewery}")
-    // @Setter
+    @Setter
     private String apiHost;
 
     public final String BEER_PATH_V1 = "/api/v1/beer/";
